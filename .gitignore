@@ -1,0 +1,15 @@
+app-plus.py
+__pycache__
+notes.txt
+test.db
+*.ipynb
+code/.data/*
+code/main
+trash.png
+trash2.png
+templates/correlation_old.html
+templates/neutron.html
+.ipynb_checkpoints/
+*.DS_Store
+node_modules/
+static/plot/neutron.png
