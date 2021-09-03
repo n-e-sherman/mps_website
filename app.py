@@ -27,7 +27,7 @@ def get_hash(inputs):
 		shash='Correlation_'
 	if inputs['Chebyshev'] == "true":
 		shash='Chebyshev_'
-	shash += inputs['thermal']+'_'+inputs['N']+'_'+inputs['Delta']+'_'+inputs['time']+'_'+inputs['MaxDim']
+	shash += inputs['thermal']+'_'+inputs['N']+'_'+inputs['Delta']+'_'+inputs['time']+'_'+inputs['MaxDim']+'.csv'
 	return shash
 
 def make_arguments(inputs):

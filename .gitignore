@@ -3,7 +3,7 @@ __pycache__
 notes.txt
 test.db
 *.ipynb
-code/.data/*
+code/.data/*.csv
 code/main
 trash.png
 trash2.png
