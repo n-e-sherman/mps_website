@@ -143,5 +143,5 @@ def correlation():
 
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port='8080') # For testing on times-login node
-    # app.run() #for deployment
+    # app.run(host='0.0.0.0', port='8080') # For testing on times-login node
+    app.run() #for deployment
