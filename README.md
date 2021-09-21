@@ -27,7 +27,7 @@ $ (env) pip install -r requirements.txt
 https://github.com/n-e-sherman/mps.git
 and the executable must be called 'main' and placed in the code directory.
 
-```
+
 6. Finally start the web server:
 ```
 $ (env) python app.py
