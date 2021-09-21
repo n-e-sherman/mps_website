@@ -21,6 +21,18 @@ def rescale(zs, vmin = 0, vmax = 1):
     res = ( (_zs - zmin) * (vmax - vmin) ) / (zmax - zmin) + vmin
     return res
 
+def get_file_name(inputs, cwd):
+	read_dir = 'code/.results/'
+	if inputs['Correlation'] == "true":
+		read_dir += 'correlationx/'
+	if inputs['Chebyshev'] == "true":
+		read_dir += 'chebyshevx/'
+	read_dir += inputs['Model'] + '/'
+	for file in os.listdir(cwd+read_dir):
+		if not (file == '.gitkeep'):
+			file_name = cwd + read_dir + file
+	return file_name
+
 def get_hash(inputs):
 	shash = ""
 	if inputs['Correlation'] == "true":
@@ -116,10 +128,8 @@ def run_code(inputs):
 	sweeps_maxdim = [np.max([1,int(1.0 / float(inputs['nSweeps']) * n * int(inputs['MaxDim']))]) for n in range(1, inputs['nSweeps'] + 1)]
 	inputs['sweeps_maxdim'] = str(sweeps_maxdim).strip("[").strip("]").replace(" ", "")
 
-	result = subprocess.run([cwd+"code/main"]+make_arguments(inputs),capture_output=True)
-	s = str(result.stdout)
-	_file_name = s.split()[-1]
-	file_name = cwd+_file_name.replace("\\n'","")
+	subprocess.run([cwd+"code/main"]+make_arguments(inputs))
+	file_name = get_file_name(inputs, cwd)
 	df = pd.read_csv(file_name)
 	os.remove(file_name)
 	df.to_csv(_file)
