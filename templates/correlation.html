@@ -180,9 +180,9 @@
 
 							<div class="col">
 								<label for="L" class="text-label"> L</label>
-						  		<input type="number" class="form-control" placeholder="64" aria-label="L" name="N" id="L" step="1" min="2" max="64" tabindex="1" required>
+						  		<input type="number" class="form-control" placeholder="64" aria-label="L" name="N" id="L" step="1" min="3" max="64" tabindex="1" required>
 						  		<div class="invalid-feedback">
-							     	Please provide an integer between 2 and 64.
+							     	Please provide an integer between 3 and 64.
 							    </div>
 							</div>
 
@@ -196,17 +196,17 @@
 
 						    <div class="col">
 								<label for="time" class="text-label"> time </label>
-								<input type="number" class="form-control" placeholder="10" aria-label="time" name="time" id="time" max="50" min="0" step="any" tabindex="1" required>
+								<input type="number" class="form-control" placeholder="10" aria-label="time" name="time" id="time" max="50" min="0.1" step="any" tabindex="1" required>
 								<div class="invalid-feedback">
-							     	Please provide a non-negative number less than 50.
+							     	Please provide a positive number between 0.1 and 50.
 							    </div>
 							</div>
 
 							<div class="col">
 								<label for="chi" class="tex-label"> \(\chi\) </label>
-								<input type="number" class="form-control" placeholder="8" aria-label="chi" name="MaxDim" id="chi" max="32" min="1" tabindex="1" required>
+								<input type="number" class="form-control" placeholder="8" aria-label="chi" name="MaxDim" id="chi" max="32" min="2" tabindex="1" required>
 								<div class="invalid-feedback">
-							     	Please provide an integer between 1 and 32.
+							     	Please provide an integer between 2 and 32.
 							    </div>
 						    </div>
 						</div>
